@@ -1,0 +1,43 @@
+extends ../_template
+
+block variables
+    - var title = 'login'
+    - var sotial = ['vk', 'git', 'in']
+block content
+    .wrapper-welcome
+        .welcom-plate
+            .wrapp_login
+                .login-title_wrapp
+                    h1.login-title_text Авторизируйтесь
+                    .login-title_button-line
+                form.login_form(id="loin" method="post")
+                    p.form-paragraf
+                        .input-text-area_log
+                        input(class="input-text-area" form="login" type="text" placeholder="Логин")
+                    p.form-paragraf
+                        .input-text-area_pass
+                        input(class="input-text-area" form="login" type="password" placeholder="Пароль")
+                    p.form-paragraf
+                        input(class="check-yes" form="login" type="checkbox" value="" id="check-yes")
+                        label(for="check-yes")
+                        | Я человек
+                    p.form-paragraf Вы точно не робот?
+                    p.form-paragraf
+                        input(class="radio-button radio-yes" form="login" type="radio" value="" id="rado-yes")
+                        label(class="label-text" for="rado-yes")
+                        | Да
+
+                        input(class="radio-button radio-no" form="login" type="radio" value="" id="rado-no")
+                        label(for="rado-no")
+                        | Не уверен
+                nav.login_nav
+                    ul.login-nav_list
+                        each item,index in ['На главную', 'Войти']
+                            li.login-nav-item
+                                a.login-nav_link(href="#")
+                                    .nav_link-button
+                                        span.nav_link-button_text= item
+
+
+    footer.footer
+        span.footer-text © Владимир Астахов | создано с любовью в LoftSchool | 2016

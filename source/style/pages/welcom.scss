@@ -1,0 +1,185 @@
+.wrapper-welcome {
+  display: flex;
+  flex-direction: column;
+  background: url("/assets/img/background/water.jpg");
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  margin-bottom: -100px;
+  &:after {
+    content: '';
+    display: block;
+    height: 100px;
+  }
+}
+
+.welcom-header {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.autorization-link {
+  display: block;
+  float: right;
+  &:hover {
+    .autoriztion-button {
+      background-color: #4e8839;
+      border-color: #729e19;
+    }
+  }
+
+}
+
+.autoriztion-button {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: white;
+  padding: 15px 30px;
+  border: 1px solid white;
+  border-radius: 40px;
+  transition: .5s;
+}
+
+.welcom-plate {
+  display: flex;
+  flex-direction: column;
+  min-width: 380px;
+  overflow: hidden;
+  padding-top: 40px;
+  margin: auto;
+  background-color: rgba(18, 38, 32, .6);
+  border-radius: 10px;
+}
+
+.welcom-avatar_wrap {
+  margin: 0 auto;
+  max-width: 140px;
+  max-height: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 20px;
+
+}
+
+.welcom-avatar {
+  width: 100%;
+}
+
+.welcom-sub_text {
+  max-width: 255px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcom-name {
+  max-width: 250px;
+  font-size: 28px;
+  font-family: "Roboto";
+  color: white;
+  margin-bottom: 20px;
+}
+
+.welcom-prof {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer {
+  padding: 40px 0;
+  height: 100px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: white;
+}
+
+.welcome-sotials {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcom-sotials_item {
+  display: inline-block;
+  margin-right: 25px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.welcom-sotials_link {
+  display: block;
+  height: 24px;
+  width: 32px;
+  &.welcom-sotials_link_vk {
+    background: url("/assets/img/svg/vk.svg") no-repeat;
+  }
+
+  &.welcom-sotials_link_github {
+    background: url("/assets/img/svg/github.svg") no-repeat;
+  }
+
+  &.welcom-sotials_link_in {
+    background: url("/assets/img/svg/in.svg") no-repeat;
+    &:hover {
+      background: url("/assets/img/svg/in.svg") no-repeat;
+    }
+  }
+
+}
+
+.welcom_nav {
+  max-width: 380px;
+}
+
+.welcom-nav_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+}
+
+.welcom-nav-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  &:nth-child(2) {
+    .nav_link-button {
+      border-right: 2px solid #a0b99e;
+      border-left: 2px solid #a0b99e;
+    }
+  }
+}
+
+.welcom-nav_link {
+  display: block;
+  height: 100%;
+  &:hover {
+    .nav_link-button {
+      background-color: #477c37;
+    }
+  }
+
+}
+
+.nav_link-button {
+  height: 100%;
+  background-color: #608d53;
+  padding: 14px 30px;
+  transition: .4s;
+}
+
+.nav_link-button_text {
+  max-width: 95px;
+  color: white;
+  font-size: 16px;
+  font-family: "Roboto";
+}

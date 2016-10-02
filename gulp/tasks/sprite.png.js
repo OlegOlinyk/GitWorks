@@ -21,6 +21,6 @@ module.exports = function() {
      $.gulp.task('sprite:png', $.gulp.series(
          'sprite-generate:png',
          'copy:sprite-img',
-        'copy:sprite-scss'
+         'copy:sprite-scss'
   ));
 };

@@ -1,0 +1,6 @@
+mixin navigation(className, item, activeClass)
+    nav(class=`${className}`)
+        ul(class=`${className}_list`)
+        each item, in items
+            li(class=`${className}_item`)
+                a(class=`${className}_link` href="#")= item

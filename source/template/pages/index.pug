@@ -1,7 +1,33 @@
 extends ../_template
 
 block variables
-  - var title = 'Home page'
+    - var title = 'Welcome'
+    - var sotial = ['vk', 'git', 'in']
 
 block content
-  include ../common/_greating
+    .wrapper-welcome
+        header.welcom-header
+            a.autorization-link(href="login.html")
+                .autoriztion-button Авторизоваться
+        .welcom-plate
+            .welcom-avatar_wrap
+                img.welcom-avatar(src="assets/img/user/user-avatar.jpg")
+            .welcom-sub_text
+                h1.welcom-name Olinyk Oleg
+                sapn.welcom-prof Личный сайт веб разработчика
+            ul.welcome-sotials
+                each sotial  in ['vk', 'github', 'in']
+                    li.welcom-sotials_item
+                        a(class=`welcom-sotials_link welcom-sotials_link_${sotial}` href='#')
+                            //img(src=`/assets/img/svg/${sotial}.svg`)
+            nav.welcom_nav
+                ul.welcom-nav_list
+                    each item,index in ['Мои роботы', 'Обо мне', 'Блог']
+                        li.welcom-nav-item
+                            a.welcom-nav_link(href="#")
+                                .nav_link-button
+                                    span.nav_link-button_text= item
+
+
+    footer.footer
+        span.footer-text © Владимир Астахов | создано с любовью в LoftSchool | 2016
