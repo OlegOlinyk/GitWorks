@@ -1,0 +1,26 @@
+footter.footter
+    .footter_top
+        .footter_top_wrapp
+            .footter_top_left Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+            .footter_top_middle
+                nav.footer_nav
+                    ul.nav_footter-list
+                        li.nav_footter-item
+                           a.nav_footter_link(href="#") Мои роботы
+                        li.nav_footter-item
+                           a.nav_footter_link(href="#") Обо мне
+                        li.nav_footter-item
+                           a.nav_footter_link(href="#") Блог
+                        li.nav_footter-item
+                           a.nav_footter_link(href="#") Авторизация
+                .footer_sotials
+                    ul.sotials_list
+                        each sotial  in ['vk', 'github', 'in']
+                            li.sotials_item
+                                a(class=`sotials_link welcom-sotials_link_${sotial}` href='#')
+            .footter_top_rifht Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                .top_right-autor  — Martin Golding
+
+
+    .footter_bottom
+        .copy_ryte © Олег Олинык | Создано с любовью в LoftSchool | 2016

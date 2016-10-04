@@ -15,16 +15,16 @@ block content
             .welcom-sub_text
                 h1.welcom-name Olinyk Oleg
                 sapn.welcom-prof Личный сайт веб разработчика
-            ul.welcome-sotials
-                each sotial  in ['vk', 'github', 'in']
-                    li.welcom-sotials_item
-                        a(class=`welcom-sotials_link welcom-sotials_link_${sotial}` href='#')
-                            //img(src=`/assets/img/svg/${sotial}.svg`)
+            .sotials_wrapp
+                ul.sotials_list
+                    each sotial  in ['vk', 'github', 'in']
+                        li.sotials_item
+                            a(class=`sotials_link welcom-sotials_link_${sotial}` href='#')
             nav.welcom_nav
                 ul.welcom-nav_list
                     each item,index in ['Мои роботы', 'Обо мне', 'Блог']
                         li.welcom-nav-item
-                            a.welcom-nav_link(href="#")
+                            a.welcom-nav_link(href="about.html")
                                 .nav_link-button
                                     span.nav_link-button_text= item
 

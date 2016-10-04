@@ -1,0 +1,109 @@
+.wrapper {
+  min-width: 100%;
+  //display: inline-flex;
+  //flex-direction: column;
+  //flex-wrap: wrap;
+
+}
+
+.header_content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 110px;
+  padding: 35px 30px;
+  background: transparent;
+}
+
+.top_section {
+  display: flex;
+  flex-direction: column;
+  margin-top: -110px;
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  background: url("/assets/img/background/water.jpg");
+  background-size: cover;
+}
+
+.hide_text-wrapp {
+  position: absolute;
+  left: -400px;
+  top: -70px;
+  text-align: center;
+  width: 1000px;
+  z-index: -500;
+  svg {
+    opacity: .4;
+    fill: rgba(255, 255, 255, 0.06);
+  }
+}
+
+.top_user-wrapp {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  max-width: 350px;
+  max-height: 250px;
+  z-index: 999;
+}
+
+.wrapp-photo {
+  margin: auto;
+  max-width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 35px;
+}
+
+.user_photo {
+  width: 100%;
+}
+
+.user_name {
+  margin: auto;
+  max-width: 250px;
+  font-size: 28px;
+  font-family: "Roboto";
+  color: white;
+  margin-bottom: 18px;
+}
+
+.user_proffesion {
+  margin: auto;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgba(255, 255, 255, 0.8);
+
+}
+
+.bottom_figure_wrapp {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  max-height: 114px;
+}
+
+.bottom_figure_left {
+  width: 49%;
+}
+
+.bottom_figure_right {
+  width: 49%;
+}
+
+.arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  opacity: 0.3;
+  transition: 0.3s;
+  cursor: pointer;
+  height: 17px;
+  width: 27px;
+  &:hover {
+    opacity: 1;
+  }
+}

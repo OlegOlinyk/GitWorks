@@ -1,0 +1,232 @@
+//aBOUT_MIDDLE
+.middle_about {
+  display: flex;
+  align-items: stretch;
+  min-height: 850px;
+  widht: 100%;
+}
+
+.middle_about-left {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: #ebefe2;
+  width: 49%;
+  padding-top: 15px;
+}
+
+.wrapp_middle_left-title {
+  display: flex;
+  flex-direction: column;
+  max-width: 49%;
+  margin: 0 auto 35px;
+  z-index: 999;
+}
+
+.wrapp_middle_left-title {
+  position: relative;
+}
+
+.middle_left-title {
+  text-align: center;
+  font-size: 62px;
+  font-family: "SansusWebissimo";
+  color: rgb(55, 62, 66);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
+
+.midle_title-line {
+  margin: 0 auto;
+  width: 90px;
+  height: 3px;
+  background-color: rgb(55, 62, 66);
+}
+
+.middle_hide-text {
+  display: none;
+  position: absolute;
+  top: -10px;
+  text-align: center;
+  width: 360px;
+  z-index: -500;
+  svg {
+    g {
+      path {
+
+        fill: #e2ebd0;
+      }
+    }
+  }
+}
+
+.middle_left-photo {
+  width: 450px;
+  height: 400px;
+  max-width: 450px;
+  max-height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.middle-photo {
+  width: 100%;
+}
+
+.middle_left-paragraf {
+  margin: 0 auto 45px;
+  max-width: 444px;
+}
+
+.title_middle_paragraf {
+  font-size: 35px;
+  font-family: "SansusWebissimo";
+  color: rgb(86, 99, 88);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.middle_paragraf {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgb(86, 99, 88);
+  text-align: left;
+  margin-bottom: 45px;
+}
+
+.middle_paragraf-right {
+  margin-bottom: 0;
+}
+
+.midle_paragraf-line {
+  margin: 0 auto;
+  width: 90px;
+  height: 3px;
+  background-color: rgb(86, 99, 88);
+  margin-bottom: 20px;
+
+}
+
+//right
+.midle_aabout-right {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 49%;
+  padding: 15px 20px 80px 40px;
+
+}
+
+.wrapp_middle_right-title {
+  max-width: 49%;
+  margin-bottom: 60px;
+}
+
+.right_middle-title {
+  margin: 0 auto;
+  font-size: 35px;
+  font-family: "SansusWebissimo";
+  color: rgb(86, 99, 88);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 360px;
+}
+
+.midle_paragraf-line-r {
+  margin: 0 auto;
+  width: 90px;
+  height: 3px;
+  background-color: rgb(86, 99, 88);
+  margin-bottom: 40px;
+
+}
+
+.prof_block-title_list {
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "Roboto";
+  color: rgb(86, 99, 88);
+  margin-bottom: 20px;
+
+}
+
+.prof_list {
+  display: flex;
+  flex-wrap: wrap;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.prof_item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.item_circle {
+  border-radius: 50%;
+  width: 112px;
+  height: 112px;
+  background-color: black;
+}
+
+//about_MAP
+
+.about_map {
+  display: flex;
+  background-image: url("../img/background/water.jpg");
+  min-height: 970px;
+  widows: 100%;
+  margin-bottom: -186px;
+}
+
+.map_contact-wrapp {
+  flex-direction: column;
+  min-width: 380px;
+  overflow: hidden;
+  padding: 40px 40px;
+  margin: auto;
+  background-color: rgba(228, 233, 222, .6);
+  border-radius: 10px;
+}
+
+.contact_title {
+  font-size: 35px;
+  font-family: "SansusWebissimo";
+  font-weight: bold;
+  color: rgb(86, 99, 88);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact_item {
+  transition: 0.3s;
+  margin-bottom: 25px;
+  &:hover {
+    .contact_link {
+      color: #74a163;
+      text-decoration: underline;
+    }
+  }
+}
+
+.contact_link {
+  display: block;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgba(69, 90, 100, 0.8);
+  font-weight: bold;
+
+}
+
+.contact-img {
+  margin-right: 10px;
+}

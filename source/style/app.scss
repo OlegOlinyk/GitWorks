@@ -1,6 +1,10 @@
 @import 'common/mixins';
+@import 'common/hamburger';
 @import 'pages/welcom';
 @import 'pages/login';
+@import 'common/tamplate-content';
+@import 'pages/about';
+@import 'common/footter';
 @import '/node_modules/normalize.css/normalize.css';
 
 //layout
@@ -12,6 +16,11 @@ html, body {
 
 html {
   box-sizing: border-box;
+}
+
+
+.wrapper {
+  overflow:  hidden;
 }
 
 *, *:before, *:after {

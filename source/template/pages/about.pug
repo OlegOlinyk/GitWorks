@@ -1,0 +1,14 @@
+extends ../_template
+block variables
+    - var title = 'About'
+    - var name = 'Oleg Olinyk'
+    - var sotial = ['vk', 'git', 'in']
+block content
+    .wrapper
+        include ../common/head_content
+        include about/about_middle.pug
+        include about/about_map.pug
+        include ../common/footter
+
+
+

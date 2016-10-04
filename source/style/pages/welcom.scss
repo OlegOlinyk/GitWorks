@@ -103,12 +103,16 @@
   color: white;
 }
 
-.welcome-sotials {
-  text-align: center;
+.sotials_wrapp {
   margin-bottom: 40px;
 }
 
-.welcom-sotials_item {
+.sotials_list {
+  max-width: 160px;
+  text-align: center;
+}
+
+.sotials_item {
   display: inline-block;
   margin-right: 25px;
   &:last-child {
@@ -116,7 +120,7 @@
   }
 }
 
-.welcom-sotials_link {
+.sotials_link {
   display: block;
   height: 24px;
   width: 32px;
