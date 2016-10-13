@@ -1,0 +1,150 @@
+.works_wrapp {
+  display: flex;
+  flex-direction: column;
+  min-height: 930px;
+  width: 100%;
+}
+
+.works_title-wrapp {
+  position: relative;
+  background-color: white;
+  padding-top: 70px;
+  padding-bottom: 40px;
+
+}
+
+.portfolio_title-wrapp {
+  margin-bottom: 25px;
+}
+
+.works_title {
+  position: relative;
+  text-align: center;
+  font-size: 62px;
+  font-family: "SansusWebissimo";
+  color: rgb(55, 62, 66);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+  z-index: 999;
+
+}
+
+.works_botton-line {
+  margin: 0 auto;
+  width: 90px;
+  height: 3px;
+  background-color: rgb(55, 62, 66);
+}
+
+.works_hide-text {
+  //display: none;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  svg {
+    g {
+      path {
+        fill: #e2ebd0;
+      }
+    }
+  }
+}
+
+//slider
+.works_slider-section {
+  padding-top: 90px;
+  background-color: #ebefe2;
+}
+
+.slider-wrapp {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.slider_list {
+  width: 5000px;
+  position: relative;
+  transition: 0.3s;
+  left: 0;
+}
+
+.slider_item {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+
+.poortfolio_left {
+  width: 49%;
+}
+
+.portfolio_right {
+  display: flex;
+  width: 49%;
+}
+
+.portfolio_right-align {
+  max-width: 380px;
+  margin: auto;
+}
+
+.portfolio_title {
+  font-size: 35px;
+  font-family: "SansusWebissimo";
+  color: rgb(86, 99, 88);
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 25px;
+
+}
+
+.portfolio_botton-line {
+  width: 90px;
+  height: 3px;
+  background-color: rgb(55, 62, 66);
+}
+
+.portfolio_stuff {
+  font-size: 15.791px;
+  font-family: "Roboto";
+  color: rgb(78, 136, 57);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.portfolio_button_link {
+  display: block;
+}
+
+.portfolio_button {
+  max-width: 250px;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: white;
+  padding: 15px 30px;
+  border: 1px solid white;
+  border-radius: 40px;
+  background-color: #6c9c5a;
+}
+
+.portfolio_button-icon {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.poortfolio_picture {
+  max-width: 500px;
+  max-height: 635px;
+}
+
+.portfolio_img {
+  width: 100%;
+}
+
+.portfolio_description {
+  width: 50%;
+}
