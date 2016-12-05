@@ -1,0 +1,44 @@
+@import "variables";
+
+@font-face {
+  font-family: 'sotial-icon';
+  src:  url('#{$icomoon-font-path}/sotial-icon.eot?o2rk88');
+  src:  url('#{$icomoon-font-path}/sotial-icon.eot?o2rk88#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/sotial-icon.ttf?o2rk88') format('truetype'),
+    url('#{$icomoon-font-path}/sotial-icon.woff?o2rk88') format('woff'),
+    url('#{$icomoon-font-path}/sotial-icon.svg?o2rk88#sotial-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sotial-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github {
+  &:before {
+    content: $icon-github;
+  }
+}
+.icon-in {
+  &:before {
+    content: $icon-in;
+  }
+}
+.icon-vk {
+  &:before {
+    content: $icon-vk;
+  }
+}
+

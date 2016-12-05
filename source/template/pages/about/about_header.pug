@@ -1,23 +1,51 @@
-header.header_content
-    .sotials
-        ul.sotials_list
-            each sotial  in ['vk', 'github', 'in']
-                li.sotials_item
-                    a(class=`sotials_link welcom-sotials_link_${sotial}` href='#')
-                        span(class=`icon-${sotial}`)
-    div(id="nav-icon1")
-        span
-        span
-        span
+.wrapper-welcome
+    canvas.Background-canvas
 .top_section
+    header.header_content
+        .sotials
+            ul.sotials_list
+                each sotial  in ['vk', 'github', 'in']
+                    li.sotials_item
+                        a(class=`sotials_link welcom-sotials_link_${sotial}` href='#')
+                            span(class=`icon-${sotial}`)
+        input(type='checkbox' id='toggle' style='display:none;')
+        label(for='toggle').toggle-btn.toggle-btn__cross
+            div#hamburger
+                span
+                span
+                span
+                span
+                span
+                span
+        nav
+            ul
+                li
+                    a(href="works.html") Мои роботы
+                    .border_nav
+                li
+                    a(href="about.html") Обо мне
+                    .border_nav
+                //li
+                //    a(href="blog.html") Блог
+                //    .border_nav
+                li
+                    a(href="index.html") Авторизация
+                    .border_nav
+
     .top_user-wrapp
         .hide_text-wrapp
-            include ../../images/svg/about_header.svg
+            include ../../../images/svg/about_header.svg
         .wrapp-photo
             img.user_photo(src="assets/img/user/user-avatar.jpg")
         h1.user_name #{name}
         p.user_proffesion Личный сайт веб разработчика
     .bottom_figure_wrapp
+        svg(version="1.1" width="100%" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 160" preserveAspectRatio="none")
+            polygon(fill="#F0EFE9" points="0,0 50,160 0,160")
+            polygon(fill="#f4f5f0" points="50,160 100,160 100,0")
     .arrow
-        include ../../images/svg/arrow_down.svg
+        a.arrow_link(href="#about_middle" id="arrow")
+            include ../../../images/svg/arrow_down.svg
+
+
 

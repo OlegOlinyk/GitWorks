@@ -9,3 +9,26 @@
   }
 }
 
+@mixin laptop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin iphone {
+  @media screen and (max-width: 488px) {
+    @content;
+  }
+}
+
+
+
+@include iphone {
+
+}

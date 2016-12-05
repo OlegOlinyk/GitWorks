@@ -1,13 +1,20 @@
-.footer {
+.footter {
   display: flex;
   flex-direction: column;
 }
+
 .footter_top {
   display: flex;
   height: 147px;
   width: 100%;
   padding: 30px;
   background-color: rgba(55, 62, 66, 0.85);
+  @include ipad {
+    height: 100%;
+  }
+  @include iphone {
+    padding: 10px;
+  }
 }
 
 .footter_top_wrapp {
@@ -16,6 +23,7 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footter_top_left {
@@ -24,6 +32,15 @@
   font-size: 16px;
   font-family: "Roboto";
   color: rgb(255, 255, 255);
+  @include ipad {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  @include iphone {
+    width: 100%;
+    border-bottom: 1px solid #757a7d;
+    padding: 0 0 20px;
+  }
 }
 
 .footter_top_middle {
@@ -33,6 +50,18 @@
   padding: 0 30px;
   border-right: 1px solid #757a7d;
   border-left: 1px solid #757a7d;
+  @include ipad {
+    width: 50%;
+    border-right: 0;
+    border-left: 0;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  @include iphone {
+    width: 100%;
+    border-bottom: 1px solid #757a7d;
+    padding: 0 0 20px;
+  }
 }
 
 .footer_nav {
@@ -49,6 +78,9 @@
 
 .nav_footter-item {
   margin-right: 20px;
+  @include ipad {
+    margin: 0;
+  }
   &:hover {
     .nav_footter_link {
       color: #74a163;
@@ -70,6 +102,10 @@
   color: rgba(255, 255, 255, 0.502);
   font-style: italic;
   width: 30%;
+  @include ipad {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .top_right-autor {
@@ -82,11 +118,12 @@
   display: flex;
   background-color: rgba(108, 156, 90, 0.85);
   width: 100%;
-  height: 38px;
   padding: 12px 0;
 }
 
 .copy_ryte {
+  flex-grow: 1;
+  text-align: center;
   margin: 0 auto;
   font-size: 15.771px;
   font-family: "Roboto";

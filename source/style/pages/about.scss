@@ -2,6 +2,7 @@
 .middle_about {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
   min-height: 850px;
   widht: 100%;
 }
@@ -14,6 +15,9 @@
   background-color: #ebefe2;
   width: 49%;
   padding-top: 15px;
+  @include ipad {
+    width: 100%;
+  }
 }
 
 .wrapp_middle_left-title {
@@ -36,6 +40,7 @@
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 20px;
+  z-index: 999;
 
 }
 
@@ -47,25 +52,25 @@
 }
 
 .middle_hide-text {
-  display: none;
   position: absolute;
-  top: -10px;
-  text-align: center;
-  width: 360px;
-  z-index: -500;
+  top: -40px;
+  left: 50%;
+  width: 350px;
+  transform: translateX(-50%);
   svg {
     g {
       path {
-
         fill: #e2ebd0;
       }
     }
   }
+  @include iphone {
+    width: 260px;
+    top: 0%;
+  }
 }
 
 .middle_left-photo {
-  width: 450px;
-  height: 400px;
   max-width: 450px;
   max-height: 400px;
   overflow: hidden;
@@ -97,6 +102,9 @@
   color: rgb(86, 99, 88);
   text-align: left;
   margin-bottom: 45px;
+  @include ipad {
+    padding: 0 20px;
+  }
 }
 
 .middle_paragraf-right {
@@ -116,16 +124,25 @@
 .midle_aabout-right {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-grow: 1;
   flex-shrink: 1;
-  max-width: 49%;
-  padding: 15px 20px 80px 40px;
+  flex-wrap: wrap;
+  width: 49%;
+  background-color: #f4f5f0;
+  padding: 15px 20px;
+  @include ipad {
+    width: 100%;
+  }
 
 }
 
 .wrapp_middle_right-title {
-  max-width: 49%;
+  max-width: 350px;
   margin-bottom: 60px;
+  @include ipad {
+    max-width: 100%;
+  }
 }
 
 .right_middle-title {
@@ -148,43 +165,124 @@
 
 }
 
+.prof_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prof_block-skils {
+  margin-bottom: 30px;
+}
+
 .prof_block-title_list {
   font-weight: bold;
   font-size: 28px;
   font-family: "Roboto";
   color: rgb(86, 99, 88);
   margin-bottom: 20px;
+  @include ipad {
+    text-align: center;
+  }
 
 }
 
 .prof_list {
+  visibility: hidden;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   &:last-child {
     margin-right: 0;
+  }
+  @include laptop {
+    justify-content: flex-start;
+  }
+  @include iphone {
+    margin-right: 28px;
   }
 }
 
 .prof_item {
   margin-right: 30px;
   margin-bottom: 30px;
+  @include iphone {
+    margin-right: 25px;
+  }
 }
 
 .item_circle {
+  position: relative;
   border-radius: 50%;
-  width: 112px;
-  height: 112px;
-  background-color: black;
+  width: 120px;
+  height: 120px;
+}
+.g-circles {
+  fill: none;
+  stroke-width: 15;
+}
+
+.sector {
+  transition: all 1s;
+  stroke-dasharray: 160 722;
+}
+
+.html_level {
+  stroke-dasharray: 300 722;
+}
+
+.css_level {
+  stroke-dasharray: 280 722;
+}
+
+.js_level {
+  stroke-dasharray: 100 722;
+}
+
+.php_level {
+  stroke-dasharray: 50 722;
+}
+
+.mysql_level {
+  stroke-dasharray: 50 722;
+}
+
+.node_level {
+  stroke-dasharray: 100 722;
+}
+.mongo_level {
+  stroke-dasharray: 100 722;
+}
+.git_level {
+  stroke-dasharray: 160 722;
+}
+.gulp_level {
+  stroke-dasharray: 160 722;
+}
+
+.bower_level {
+  stroke-dasharray: 150 722;
+}
+
+.skils {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 75px;
+  transform: translate(-50%, -50%);
+  color: #4e8839;
+  font-size: 14px;
 }
 
 //about_MAP
 
 .about_map {
   display: flex;
+  flex-direction: column;
   background-image: url("../img/background/water.jpg");
   min-height: 970px;
-  widows: 100%;
-  margin-bottom: -186px;
+  width: 100%;
 }
 
 .map_contact-wrapp {
@@ -193,8 +291,13 @@
   overflow: hidden;
   padding: 40px 40px;
   margin: auto;
+  max-height: 350px;
   background-color: rgba(228, 233, 222, .6);
   border-radius: 10px;
+  @include iphone {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 .contact_title {

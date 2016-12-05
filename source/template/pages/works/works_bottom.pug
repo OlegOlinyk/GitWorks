@@ -1,0 +1,46 @@
+.works_bottom
+    .works_bottom_title-wrapp
+        .works_bottom-title Что обо мне говорят
+        .works_botton-line
+        .works_bottom_hide-text
+            include ../../../images/svg/about_header.svg
+    .works_bottom_content
+        ul.bottom_what-say_list
+            li.bottom_what-say_item
+                .what-say_logo
+                    img.what-say_logo-img(src="/assets/img/about_works/Dmitri.png")
+                p.what-say_paragraf Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                p.what-say_author
+                    .what-say_author-name Ковальчук Дмитрий
+                    .what-say_author-prof - основатель Loftschool
+            li.bottom_what-say_item
+                .what-say_logo
+                    img.what-say_logo-img(src="/assets/img/about_works/Zar.png")
+                p.what-say_paragraf Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                p.what-say_author
+                    .what-say_author-name Зар Захаров
+                    .what-say_author-prof -преподаватель
+        //form
+        .works_form
+            .wrapp_form
+                .form-title_wrapp
+                    h1.form-title_text Связаться со мной
+                    .form-title_button-line
+                form.login_form(id="massage" method="post")
+                    p.form-paragraf
+                        input(class="form_input-text" form="massage" type="text" placeholder="Имя")
+                    p.form-paragraf
+                        input(class="form_input-text" form="massage" type="text" placeholder="Email")
+                    p.form-paragraf
+                        textarea.form_text-area(form
+                        ="massage" placeholder="Ввудите сообщение" name="form_text-area"
+
+                        )
+                nav.form_nav
+                    ul.login-nav_list
+                        each item,index in ['Отправить', 'Очистить']
+                            li.login-nav-item
+                                a.login-nav_link(href="#")
+                                    .nav_link-button
+                                        span.nav_link-button_text= item
+        include ../../common/footter

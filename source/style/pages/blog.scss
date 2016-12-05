@@ -1,0 +1,116 @@
+.blog_wrapp {
+  background-color: #F0EFE9;
+}
+
+.blog {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 70px;
+  @include ipad {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+.blog_hide-text-wrapp {
+  svg {
+    @include iphone {
+      width: 260px;
+    }
+  }
+}
+
+.asside {
+  width: 25%;
+  @include ipad {
+    display: none;
+  }
+}
+
+.asside_list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.asside_link {
+  display: block;
+
+  &:hover {
+    .asside_text {
+      transition: .3s;
+      color: rgb(78, 136, 57);
+    }
+  }
+}
+
+.asside_item {
+  max-width: 280px;
+}
+
+.asside_text {
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgb(86, 99, 88);
+  text-align: right;
+  margin-bottom: 10px;
+
+}
+
+.active_blog {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgb(78, 136, 57);
+  font-weight: bold;
+  line-height: 1.625;
+  text-align: right;
+  border-right: 3px solid #6c9c5a;
+
+}
+
+.statte {
+  width: 75%;
+  @include ipad {
+    width: 100%;
+  }
+}
+
+.statte_list {
+  max-width: 600px;
+  margin: 0 auto;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.statte_item {
+  border-bottom: 5px solid #ecebe4;
+  margin-bottom: 70px;
+}
+
+.statte_title {
+  font-weight: bold;
+  font-size: 35px;
+  font-family: "SansusWebissimo";
+  color: rgb(86, 99, 88);
+  margin-bottom: 30px;
+}
+
+.statte_date {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgba(78, 136, 57, 0.702);
+  margin-bottom: 30px;
+
+}
+
+.statte_article {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgb(86, 99, 88);
+  margin-bottom: 70px;
+}
+

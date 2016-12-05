@@ -1,13 +1,13 @@
 .works_wrapp {
   display: flex;
   flex-direction: column;
-  min-height: 930px;
+  //min-height: 930px;
   width: 100%;
 }
 
 .works_title-wrapp {
   position: relative;
-  background-color: white;
+  background-color: #f8f9f5;
   padding-top: 70px;
   padding-bottom: 40px;
 
@@ -44,6 +44,9 @@
   left: 50%;
   transform: translateX(-50%);
   svg {
+    @include iphone {
+      width: 260px;
+    }
     g {
       path {
         fill: #e2ebd0;
@@ -52,56 +55,110 @@
   }
 }
 
+.arrow_link {
+  display: block;
+}
+
 //slider
 .works_slider-section {
-  padding-top: 90px;
+  padding-top: 20px;
   background-color: #ebefe2;
 }
 
 .slider-wrapp {
-  width: 1000px;
+  overflow: hidden;
   margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
 }
 
 .slider_list {
-  width: 5000px;
+  //display: flex;
+  //justify-content: flex-start;
   position: relative;
+  //left: 0;
   transition: 0.3s;
-  left: 0;
+  //width: 4700px;
+  width: 100%;
 }
 
 .slider_item {
-  width: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
   display: flex;
-  justify-content: space-between;
-  align-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ebefe2;
+
+  &.active {
+    z-index: 1;
+    position: relative;
+  }
+  &.inslide {
+    z-index: 2;
+  }
+  @include ipad {
+    max-width: 768px;
+  }
+
+  //@include iphone {
+  //  max-width: 320px;
+  //}
 }
 
-.poortfolio_left {
+.portfolio_left {
+  display: flex;
+  justify-content: center;
   width: 49%;
+  @include ipad {
+    order: 2;
+    width: 100%;
+  }
+  @include iphone {
+    order: 2;
+  }
 }
 
 .portfolio_right {
   display: flex;
+  flex-direction: column;
   width: 49%;
+  padding-top: 100px;
+  @include ipad {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    order: 1;
+  }
+
+  @include iphone {
+    order: 1;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .portfolio_right-align {
-  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
 }
 
 .portfolio_title {
+  text-align: center;
   font-size: 35px;
   font-family: "SansusWebissimo";
   color: rgb(86, 99, 88);
   text-transform: uppercase;
-  text-align: left;
   margin-bottom: 25px;
 
 }
 
 .portfolio_botton-line {
+  margin: 0 auto;
   width: 90px;
   height: 3px;
   background-color: rgb(55, 62, 66);
@@ -137,14 +194,73 @@
 }
 
 .poortfolio_picture {
+  display: flex;
   max-width: 500px;
   max-height: 635px;
 }
 
 .portfolio_img {
+  margin: auto;
   width: 100%;
 }
 
 .portfolio_description {
   width: 50%;
+}
+
+.slider_link-button_right {
+  display: block;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 3;
+  background-image: url("../img/svg/portf_arrow_up.png");
+  background-position: center;
+  background-repeat: no-repeat;;
+}
+
+.slider_link-button_left {
+  display: block;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  background-image: url("../img/svg/portf_arrow_down.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider_dots {
+  position: absolute;
+  z-index: 999;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-40%);
+  display: flex;
+  justify-content: center;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.slider_dots_item {
+}
+
+.slider_dots_active {
+  .slider_dots_link {
+    background-color: #6c9c5a;
+  }
+}
+
+.slider_dots_link {
+  display: block;
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #6c9c5a;
+  border-radius: 50%;
+  margin-right: 20px;
 }

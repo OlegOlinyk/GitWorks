@@ -1,18 +1,34 @@
 .wrapper-welcome {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapp-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  background: url("/assets/img/background/water.jpg");
   background-size: cover;
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
   margin-bottom: -100px;
+  perspective: 1000px;
+
   &:after {
     content: '';
     display: block;
     height: 100px;
   }
+  @include iphone {
+    padding: 0 10px;
+  }
 }
+
 
 .welcom-header {
   display: flex;
@@ -21,21 +37,14 @@
   width: 100%;
   padding: 20px;
   margin-bottom: 40px;
+  @include iphone {
+    justify-content: center;
+  }
 }
 
 .autorization-link {
   display: block;
   float: right;
-  &:hover {
-    .autoriztion-button {
-      background-color: #4e8839;
-      border-color: #729e19;
-    }
-  }
-
-}
-
-.autoriztion-button {
   font-size: 16px;
   font-family: "Roboto";
   color: white;
@@ -43,26 +52,49 @@
   border: 1px solid white;
   border-radius: 40px;
   transition: .5s;
+  &:hover {
+    background-color: #4e8839;
+    border-color: #729e19;
+  }
+
 }
+
 
 .welcom-plate {
   display: flex;
   flex-direction: column;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .5s;
   min-width: 380px;
   overflow: hidden;
-  padding-top: 40px;
+  height: 420px;
   margin: auto;
   background-color: rgba(18, 38, 32, .6);
   border-radius: 10px;
+  @include iphone {
+    min-width: 299px;
+  }
+}
+
+.welcom-inf-wrapp {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  transform: rotateY(0deg);
+  transition: .5s;
 }
 
 .welcom-avatar_wrap {
   margin: 0 auto;
+  margin-top: 40px;
   max-width: 140px;
   max-height: 140px;
   overflow: hidden;
   border-radius: 50%;
-  margin-bottom: 20px;
 
 }
 
@@ -74,7 +106,6 @@
   max-width: 255px;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .welcom-name {
@@ -104,10 +135,10 @@
 }
 
 .sotials_wrapp {
-  margin-bottom: 40px;
 }
 
 .sotials_list {
+  margin: 0 auto;
   max-width: 160px;
   text-align: center;
 }
@@ -121,35 +152,25 @@
 }
 
 .sotials_link {
-  display: block;
-  height: 24px;
-  width: 32px;
-  &.welcom-sotials_link_vk {
-    background: url("/assets/img/svg/vk.svg") no-repeat;
+  transition: .3s;
+  font-size: 24px;
+  color: white;
+  &:hover {
+    color: #4e8839;
   }
-
-  &.welcom-sotials_link_github {
-    background: url("/assets/img/svg/github.svg") no-repeat;
-  }
-
-  &.welcom-sotials_link_in {
-    background: url("/assets/img/svg/in.svg") no-repeat;
-    &:hover {
-      background: url("/assets/img/svg/in.svg") no-repeat;
-    }
-  }
-
-}
-
-.welcom_nav {
-  max-width: 380px;
 }
 
 .welcom-nav_list {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+  width: 100%;
 
+}
+
+.welcom_nav {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
 }
 
 .welcom-nav-item {
@@ -159,6 +180,9 @@
     .nav_link-button {
       border-right: 2px solid #a0b99e;
       border-left: 2px solid #a0b99e;
+      @include iphone {
+        border-right: none;
+      }
     }
   }
 }
@@ -179,6 +203,9 @@
   background-color: #608d53;
   padding: 14px 30px;
   transition: .4s;
+  @include iphone {
+    text-align: center;
+  }
 }
 
 .nav_link-button_text {
@@ -186,4 +213,35 @@
   color: white;
   font-size: 16px;
   font-family: "Roboto";
+}
+
+.rotate {
+  transform: rotateY(180deg);
+  .welcom-inf-wrapp {
+    transform: rotateY(180deg);
+  }
+  .wrapp_login {
+    transform: rotateY(0deg);
+  }
+}
+
+.rotate_back {
+  backface-visibility: hidden;
+}
+.Background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
 }

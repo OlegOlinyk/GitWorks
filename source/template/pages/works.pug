@@ -1,0 +1,14 @@
+extends ../_template
+block variables
+    - var title = 'Works'
+    - var name = 'Oleg Olinyk'
+    - var sotial = ['vk', 'git', 'in']
+    - var sitenameimg  = 'Portfolio'
+block content
+    .wrapper
+        include works/works_header
+        include works/works_middle
+        include works/works_bottom
+
+
+

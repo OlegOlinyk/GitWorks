@@ -5,19 +5,22 @@ header.header_content
                 li.sotials_item
                     a(class=`sotials_link welcom-sotials_link_${sotial}` href='#')
                         span(class=`icon-${sotial}`)
-    div(id="nav-icon1")
+    div(id="hamburger")
+        span
+        span
+        span
         span
         span
         span
 .top_section
     .top_user-wrapp
         .hide_text-wrapp
-            include ../../images/svg/about_header.svg
+            include ../images/svg/about_header.svg
         .wrapp-photo
             img.user_photo(src="assets/img/user/user-avatar.jpg")
         h1.user_name #{name}
         p.user_proffesion Личный сайт веб разработчика
     .bottom_figure_wrapp
     .arrow
-        include ../../images/svg/arrow_down.svg
+        include ../images/svg/arrow_down.svg
 

@@ -1,10 +1,21 @@
 .wrapp_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
+  transition: .5s;
+  //transition: opacity 1s;
+  transform: rotateY(180deg);
+
 }
 
 .login-title_wrapp {
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 40px;
 }
 
 .login-title_text {
@@ -24,7 +35,9 @@
 }
 
 .login_form {
-  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .login_nav {
@@ -63,7 +76,11 @@
 //form
 .login_form {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .input-text-area {
   padding: 15px 20px 15px 60px;
   border-radius: 50px;
@@ -78,25 +95,33 @@
 .input-text-area_log {
   position: absolute;
   left: 58px;
+  top: 20px;
   width: 45px;
   height: 47px;
   background-color: #f0efe9;
   background-image: url("../img/form/log.png");
   background-position: 15px 13px;
   background-repeat: no-repeat;
-  border-radius: 50px 0 0 50px ;
+  border-radius: 50px 0 0 50px;
+  @include iphone {
+    left: 18px;
+  }
 }
 
 .input-text-area_pass {
   position: absolute;
   left: 58px;
+  top: 104px;
   width: 45px;
   height: 47px;
   background-color: #f0efe9;
   background-image: url("../img/form/pass.png");
   background-position: 15px 13px;
   background-repeat: no-repeat;
-  border-radius: 50px 0 0 50px ;
+  border-radius: 50px 0 0 50px;
+  @include iphone {
+    left: 18px;
+  }
 }
 
 //FCheck-boxx style
@@ -185,4 +210,5 @@
   font-family: "Roboto";
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
+  text-align: left;
 }

@@ -16,26 +16,36 @@
 }
 
 .top_section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  margin-top: -110px;
   height: 100vh;
-  min-height: 650px;
   width: 100%;
-  background: url("/assets/img/background/water.jpg");
   background-size: cover;
 }
 
 .hide_text-wrapp {
   position: absolute;
-  left: -400px;
-  top: -70px;
-  text-align: center;
-  width: 1000px;
+  width: 500px;
+  top: 102px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -500;
   svg {
     opacity: .4;
     fill: rgba(255, 255, 255, 0.06);
+    @include iphone {
+      width: 260px;
+    }
+  }
+  @include iphone {
+    width: 260px;
+    right: -8%;
+    top: 145px;
   }
 }
 
@@ -80,24 +90,17 @@
 }
 
 .bottom_figure_wrapp {
-  display: inline-flex;
-  justify-content: space-between;
+ display: flex;
   width: 100%;
-  max-height: 114px;
+  height: 100px;
 }
 
-.bottom_figure_left {
-  width: 49%;
-}
-
-.bottom_figure_right {
-  width: 49%;
-}
 
 .arrow {
   position: absolute;
   top: 90%;
   left: 50%;
+  transform: translate(-50%);
   opacity: 0.3;
   transition: 0.3s;
   cursor: pointer;
@@ -107,3 +110,16 @@
     opacity: 1;
   }
 }
+
+.blog_hide-text-wrapp {
+  position: absolute;
+  right: -25%;
+  top: 140px;
+  transform: translate(0%);
+  z-index: -500;
+  svg {
+    opacity: .4;
+    fill: rgba(255, 255, 255, 0.06);
+  }
+}
+
